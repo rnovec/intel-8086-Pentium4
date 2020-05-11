@@ -147,11 +147,9 @@
       <table align="center" class="table is-bordered">
         <tbody>
           <tr>
-            <td v-for="(td, i) in 16" :key="i">
-              <small>{{ 16 - i - 1 }}</small>
-            </td>
           </tr>
           <tr>
+            7
             <td colspan="8">
               <!-- <input class="input" placeholder="Base (B31-B24)" type="text" /> -->
               <span
@@ -171,9 +169,11 @@
                 {{ limit2Bin[limit2Bin.length - pos] || 0 }}
               </span>
             </td>
+            6
           </tr>
 
           <tr>
+            5
             <td colspan="1">{{ P ? 1 : 0 }}</td>
             <td colspan="2">{{ DPL }}</td>
             <td colspan="1">{{ S ? 0 : 1 }}</td>
@@ -191,8 +191,10 @@
                 {{ base2Bin[base2Bin.length - pos] || 0 }}
               </span>
             </td>
+            4
           </tr>
           <tr>
+            3
             <td colspan="16">
               <!-- <input class="input" placeholder="Limite (L15-L0)" type="text" :value="limit2Bin" /> -->
               <span
@@ -219,8 +221,10 @@
                 {{ base2Bin[base2Bin.length - pos] || 0 }}
               </span>
             </td>
+            2
           </tr>
           <tr>
+            1
             <td colspan="16">
               <!-- <input class="input" placeholder="Limite (L15-L0)" type="text" :value="limit2Bin" /> -->
               <span
@@ -247,6 +251,7 @@
                 {{ limit2Bin[limit2Bin.length - pos] || 0 }}
               </span>
             </td>
+            0
           </tr>
         </tbody>
       </table>
