@@ -146,8 +146,7 @@
 
       <table align="center" class="table is-bordered">
         <tbody>
-          <tr>
-          </tr>
+          <tr></tr>
           <tr>
             7
             <td colspan="8">
@@ -195,59 +194,51 @@
           </tr>
           <tr>
             3
-            <td colspan="16">
+            <td colspan="4">
               <!-- <input class="input" placeholder="Limite (L15-L0)" type="text" :value="limit2Bin" /> -->
-              <span
-                v-for="(pos, i) in [
-                  16,
-                  15,
-                  14,
-                  13,
-                  12,
-                  11,
-                  10,
-                  9,
-                  8,
-                  7,
-                  6,
-                  5,
-                  4,
-                  3,
-                  2,
-                  1
-                ]"
-                :key="i"
-              >
+              <span v-for="(pos, i) in [16, 15, 14, 13]" :key="i">
                 {{ base2Bin[base2Bin.length - pos] || 0 }}
               </span>
             </td>
+            <td colspan="4">
+              <span v-for="(pos, i) in [12, 11, 10, 9]" :key="i">
+                {{ base2Bin[base2Bin.length - pos] || 0 }}
+              </span>
+            </td>
+
+            <td colspan="4">
+              <span v-for="(pos, i) in [8, 7, 6, 5]" :key="i">
+                {{ base2Bin[base2Bin.length - pos] || 0 }}
+              </span>
+            </td>
+            <td colspan="4">
+              <span v-for="(pos, i) in [4, 3, 2, 1]" :key="i">
+                {{ base2Bin[base2Bin.length - pos] || 0 }}
+              </span>
+            </td>
+
             2
           </tr>
           <tr>
             1
-            <td colspan="16">
+            <td colspan="4">
               <!-- <input class="input" placeholder="Limite (L15-L0)" type="text" :value="limit2Bin" /> -->
-              <span
-                v-for="(pos, i) in [
-                  16,
-                  15,
-                  14,
-                  13,
-                  12,
-                  11,
-                  10,
-                  9,
-                  8,
-                  7,
-                  6,
-                  5,
-                  4,
-                  3,
-                  2,
-                  1
-                ]"
-                :key="i"
-              >
+              <span v-for="(pos, i) in [16, 15, 14, 13]" :key="i">
+                {{ limit2Bin[limit2Bin.length - pos] || 0 }}
+              </span>
+            </td>
+            <td colspan="4">
+              <span v-for="(pos, i) in [12, 11, 10, 9]" :key="i">
+                {{ limit2Bin[limit2Bin.length - pos] || 0 }}
+              </span>
+            </td>
+            <td colspan="4">
+              <span v-for="(pos, i) in [8, 7, 6, 5]" :key="i">
+                {{ limit2Bin[limit2Bin.length - pos] || 0 }}
+              </span>
+            </td>
+            <td colspan="4">
+              <span v-for="(pos, i) in [4, 3, 2, 1]" :key="i">
                 {{ limit2Bin[limit2Bin.length - pos] || 0 }}
               </span>
             </td>

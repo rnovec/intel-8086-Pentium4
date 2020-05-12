@@ -1,3 +1,4 @@
 module.exports = {
-  publicPath: '/intel-80386-Pentium4'
+  publicPath: '/intel-8086-Pentium4',
+  outputDir: 'docs'
 }
