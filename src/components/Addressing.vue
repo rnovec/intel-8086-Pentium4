@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <h1 class="is-size-3">Direccionamiento</h1>
+    <h1 class="is-size-3">Direccionamiento (Modo Real y Protegido)</h1>
     <b-field grouped>
       <b-field label="Segmento" expanded>
         <input
           @change="calculate"
           class="input"
-          placeholder="segmento"
+          placeholder="Modo real"
           v-model="segment"
           type="text"
         />
@@ -15,7 +15,7 @@
         <input
           @change="calculate"
           class="input"
-          placeholder="base"
+          placeholder="Modo protegido"
           v-model="base"
           type="text"
         />
@@ -51,7 +51,7 @@
         />
       </b-field>
     </b-field>
-    {{ result }}
+    <em>Final = Base + Limite = {{ result }}</em> 
   </div>
 </template>
 
@@ -72,25 +72,33 @@ export default {
     this.calculate()
   },
   methods: {
+    dec2Hex(dec) {
+      return dec.toString(16).toUpperCase()
+    },
     calculate () {
-      if (this.gran == '1' && !this.segment) {
+      const base = parseInt(this.base, 16) 
+      if (this.gran == '1' && !this.segment) { // protected mode
+        const limitWithG = parseInt(this.limit + 'FFF', 16) // add FFFH
+        console.log('G=' + this.dec2Hex(limitWithG))
+        this.final = base + limitWithG
         this.segment = ''
-        this.final = parseInt(this.base, 16) + parseInt(this.limit + 'FFF', 16)
       } else if (!this.segment) {
         this.segment = ''
-        this.final = parseInt(this.base, 16) + parseInt(this.limit, 16)
-      } else {
+        const limit = parseInt(this.limit, 16)
+        this.final = base + limit
+
+      } else { // real mode
         this.limit = ''
-        this.base = this.segment + '0'
-        this.final = parseInt(this.base, 16) + parseInt('FFFF', 16)
-        this.base = this.base.toString(16).toUpperCase()
+        this.base = this.segment + '0' // add 0H
+        this.final = base + parseInt('FFFF', 16) // add FFFF
+        this.base = this.dec2Hex(this.base) // base to hex
       }
-      this.final = this.final.toString(16).toUpperCase()
+      this.final = this.dec2Hex(this.final) // final to hex
     }
   },
   computed: {
     result () {
-      return `${this.base}H - ${this.final}H`
+      return `${this.final}H`
     }
   }
 }

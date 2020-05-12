@@ -1,22 +1,26 @@
 <template>
   <div>
-    <Direc/>
+    <Addressing/>
     <hr>
-    <Descriptores/>
+    <ProtectedMode/>
+    <hr>
+    <RegisterSegment/>
     <hr>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Direc from '@/components/Direc.vue'
-import Descriptores from '@/components/Descriptores.vue'
+import Addressing from '@/components/Addressing.vue'
+import ProtectedMode from '@/components/ProtectedMode.vue'
+import RegisterSegment from '@/components/RegisterSegment.vue'
 
 export default {
   name: 'Home',
   components: {
-    Direc,
-    Descriptores
+    Addressing,
+    ProtectedMode,
+    RegisterSegment
   }
 }
 </script>
