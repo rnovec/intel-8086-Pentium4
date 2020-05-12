@@ -1,14 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aa7db1daa7f5f4114130",
-    "url": "/intel-8086-Pentium4/css/app.df43bd64.css"
+    "revision": "dd58979cb2aeab966904",
+    "url": "/intel-8086-Pentium4/css/app.f5f1c284.css"
   },
   {
-    "revision": "050b8afe3cbd6d1ee264",
+    "revision": "5f1a1f889c13965ccaa3",
     "url": "/intel-8086-Pentium4/css/chunk-vendors.daad8076.css"
   },
   {
-    "revision": "63ee17fa3308adccb3a56b62f322469c",
+    "revision": "47fbbfd42a5609102c5a509b1244b80e",
     "url": "/intel-8086-Pentium4/index.html"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/intel-8086-Pentium4/js/about.d7133b49.js"
   },
   {
-    "revision": "aa7db1daa7f5f4114130",
-    "url": "/intel-8086-Pentium4/js/app.a8a65a4c.js"
+    "revision": "dd58979cb2aeab966904",
+    "url": "/intel-8086-Pentium4/js/app.659cc1ed.js"
   },
   {
-    "revision": "050b8afe3cbd6d1ee264",
-    "url": "/intel-8086-Pentium4/js/chunk-vendors.d044e5d9.js"
+    "revision": "5f1a1f889c13965ccaa3",
+    "url": "/intel-8086-Pentium4/js/chunk-vendors.947d3cab.js"
   },
   {
     "revision": "1aede7aa06944dde172a05c44eb6f4bb",

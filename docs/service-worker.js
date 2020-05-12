@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/intel-8086-Pentium4/precache-manifest.968d5a85d21c2de67a29deb5ea6f7109.js"
+  "/intel-8086-Pentium4/precache-manifest.160670a96419fb0dfa950dda0f5cb17a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "asembly"});
